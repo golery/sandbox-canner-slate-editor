@@ -46,9 +46,6 @@ module.exports = {
   resolve: {
     extensions: ["*", ".js", ".jsx"]
   },
-  devServer: {
-    contentBase: "./dist"
-  },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: "./dist",
