@@ -7,13 +7,13 @@ module.exports = {
         library: 'GoleryEditor',
         libraryTarget: 'umd',
     },
-    externals: [
-        "react",
-        "react-dom",
-        "react-dom/server",
-        "lodash",
-        "moment"
-    ],
+    externals: {
+        "react": "react",
+        "react-dom": "react-dom",
+        "react-dom/server": "react-dom/server",
+        "lodash": "lodash",
+        "moment": "moment"
+    },
     devtool: "source-map",
     module: {
         rules: [
