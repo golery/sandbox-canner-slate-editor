@@ -1,6 +1,6 @@
 {
   "name": "golery-editor",
-  "version": "1.0.5",
+  "version": "1.0.11",
   "description": "A customized vesion of canner-slate-editor for www.golery.com",
   "homepage": "https://www.golery.com",
   "author": {
@@ -9,7 +9,7 @@
     "url": "https://www.golery.com"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode development --progress"
   },
   "files": [
     "dist"
@@ -24,12 +24,6 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.1",
-    "less-loader": "^4.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2",
     "@canner/slate-constant": "^1.5.0",
     "@canner/slate-icon-align": "^1.5.0",
     "@canner/slate-icon-clean": "^1.5.0",
@@ -40,6 +34,9 @@
     "@canner/slate-icon-table": "^1.5.0",
     "@canner/slate-icon-undo": "^1.5.0",
     "antd": "3.9.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "less-loader": "^4.1.0",
     "react-emotion": "^9.2.12",
     "slate": "^0.33.0",
     "slate-edit-blockquote": "0.6.1",
@@ -55,9 +52,10 @@
     "slate-simulator": "^0.4.23",
     "slate-soft-break": "^0.9.0",
     "slate-toolbar": "^1.5.0",
-    "slate-trailing-block": "^0.5.0"
-  },
-  "dependencies": {
+    "slate-trailing-block": "^0.5.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
   },
   "license": "MIT"
 }
