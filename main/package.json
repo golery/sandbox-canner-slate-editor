@@ -1,6 +1,6 @@
 {
   "name": "golery-editor",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "description": "A customized vesion of canner-slate-editor for www.golery.com",
   "homepage": "https://www.golery.com",
   "author": {
@@ -11,7 +11,7 @@
   "scripts": {
     "build.dev": "webpack --config webpack.config.js --mode development --progress",
     "build.prod": "webpack --config webpack.config.js --mode production --progress --output-filename index.min.js",
-    "build": "yarn run dev && yarn run prod"
+    "build": "yarn run build.dev && yarn run build.prod"
   },
   "files": [
     "dist"
