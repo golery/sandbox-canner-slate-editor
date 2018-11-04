@@ -1,4 +1,8 @@
-# To publish:
+# Features
+- Softbreak
+- Disable when SSR
+
+# To publish:   
 /main:
 
 yarn build
@@ -9,3 +13,6 @@ yarn publish
 
 To use
 yarn upgrade --latest golery-editor
+
+# Dev
+Read /example for dev
