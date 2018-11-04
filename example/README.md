@@ -2,11 +2,15 @@ An example of how to use golery-editor
 
 #HOW TO USE
 Update the code, update version
-npm publish
+/main: yarn build
+       OR yarn build.dev
+       Or yarn build.prod
+/main: yarn publish
 
 In example
+/example:
 yarn upgrade golery editor
-yarn run dev
+yarn dev
 Access at localhost:8080
 
 

@@ -1,12 +1,13 @@
-module.exports = {
+const config = {
     entry: "./src/index.js",
     output: {
         path: __dirname + "/dist",
+        filename: "index.js",
         publicPath: "/",
-        filename: "bundle.js",
         library: 'GoleryEditor',
         libraryTarget: 'umd',
     },
+    devtool: "source-map",
     externals: {
         "react": "react",
         "react-dom": "react-dom",
@@ -14,7 +15,6 @@ module.exports = {
         "lodash": "lodash",
         "moment": "moment"
     },
-    devtool: "source-map",
     module: {
         rules: [
             {
@@ -54,4 +54,13 @@ module.exports = {
     resolve: {
         extensions: ["*", ".js", ".jsx"]
     }
+};
+
+module.exports = function(env, argv) {
+    if (argv.mode === "production") {
+       config.output.filename = "index.min.js";
+       config.devtool=false;
+    }
+    console.log(config);
+    return config;
 };
