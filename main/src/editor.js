@@ -199,10 +199,6 @@ export default class GoleryEditorComponent extends React.Component<Props, State>
   };
 
   render() {
-    let {debug} = this.props;
-    if (debug) {
-        console.log("Render GoleryEditor");
-    }
     const {
       value,
       onChange,

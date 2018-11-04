@@ -2,26 +2,22 @@ An example of how to use golery-editor
 
 # USE LOCAL DEV VERSION OF GOLERY-EDITOR
 **/main:**
-`yarn link`
 `yarn build.dev`
- 
 Build only dist/index.dev.js with source map. It's faster.
-
-**/example/package.json:**
-`yarn link golery-editor`
-
-Use local version
 
 **/example/src:**
 
 `import from  from "golery-editor/dist/index.dev.js";`
+use dev bundle with source map.
+Alternative: index.min.js
 
-has source map
+**/example/package.json:**
+`golery-editor:"../main"`
+Use local version (still need yarn upgrade golery-editor for each change)
+
 
 **/example**
-
-`yarn dev`
-
+`yarn upgrade golery-editor && yarn dev`
 Access at localhost:8080
 
 
@@ -35,25 +31,19 @@ yarn build.dev - Build only index.dev.js, much faster
 /example:
 
 `"golery-editor": "*"`
-
-Use latest version.
-If you don't want to use link version
-/example:
-`yarn unlink`
-then use published version
-`yarn add golery-editor`
+Use latest version from 
 or use local version (still needs yarn upgrade golery-editor)
 `yarn install ../main`
 
 # PUBLISHED VERSION AND TEST PRODUCTION VERSION
 **/main:**
-`: yarn build`
 
-`: yarn publish`
+`yarn build`
+
+`yarn publish`
+
+Use version 1.1.0-alpha.x
  
-Build and publish to npm dist/index.min.js 
-
-
 **/example/package.json:**
 
 `depedency {
