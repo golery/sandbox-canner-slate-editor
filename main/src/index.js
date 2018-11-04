@@ -24,7 +24,6 @@ export default class GoleryEditor extends React.Component {
     }
 
     render() {
-        console.log("X");
         return Editor == null ? <div>"No editor"</div> : <Editor {...this.props} />
     }
 }

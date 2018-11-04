@@ -62,3 +62,9 @@ Use version 1.1.0-alpha.x
 `yarn dev`
 
 Access at localhost:8080
+
+**/golery project**
+
+`yarn upgrade --latest golery-editor`
+Access:
+http://localhost:8080/pencil?sandbox
