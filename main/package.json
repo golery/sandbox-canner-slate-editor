@@ -1,6 +1,6 @@
 {
   "name": "golery-editor",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "A customized vesion of canner-slate-editor for www.golery.com",
   "homepage": "https://www.golery.com",
   "author": {
@@ -9,12 +9,14 @@
     "url": "https://www.golery.com"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode development --progress"
+    "build.dev": "webpack --config webpack.config.js --mode development --progress",
+    "build.prod": "webpack --config webpack.config.js --mode production --progress --output-filename index.min.js",
+    "build": "yarn run dev && yarn run prod"
   },
   "files": [
     "dist"
   ],
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -56,6 +58,11 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
+  },
+  "peerDependencies": {
+    "antd": "3.9.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "license": "MIT"
 }
