@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import CannerEditor, {SlateHtmlSerializer, SlateEditorHtmlDefaultRule, SlateValue} from "golery-editor/dist/index";
+import GoleryEditor, {SlateHtmlSerializer, SlateEditorHtmlDefaultRule, SlateValue} from "golery-editor/dist/index.dev.js";
 
 import "antd/dist/antd.css";
 
@@ -53,7 +53,7 @@ class DemoEditor extends React.Component {
                 </div>
                 <button onClick={() => this._setHtml()}>SetHtml</button>
                 <button onClick={() => this._getHtml()}>GetHtml</button>
-                <CannerEditor value={value} onChange={onChange} readOnly={false} />
+                <GoleryEditor value={value} onChange={onChange} readOnly={false} />
             </div>
         );
     }

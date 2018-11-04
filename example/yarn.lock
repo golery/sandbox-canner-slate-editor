@@ -2478,7 +2478,12 @@ globby@^6.1.0:
     pinkie-promise "^2.0.0"
 
 golery-editor@../main:
-  version "1.0.2-alpha.0"
+  version "1.1.0-alpha.1"
+
+golery-editor@^1.1.0-alpha.1:
+  version "1.1.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/golery-editor/-/golery-editor-1.1.0-alpha.1.tgz#1fd837300dee980781cdc1d6f2b470a63921d6fd"
+  integrity sha512-HKCT8fcdtr2WeHLlPlgl+s1zz8RY3XXzpTWW0p8fFrKoqFrp0FDlynJp5KCysGfhdg+4W+FETlWSjHRDyIXGdg==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.11"
