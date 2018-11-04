@@ -1,16 +1,62 @@
 An example of how to use golery-editor
 
-#HOW TO USE
-Update the code, update version
-/main: yarn build
-       OR yarn build.dev
-       Or yarn build.prod
-/main: yarn publish
+# USE PUBLISHED VERSION OF GOLERY-EDITOR
+**/main:**
 
-In example
-/example:
-yarn upgrade golery editor
-yarn dev
+`: yarn build`
+
+`: yarn publish`
+ 
+Build and publish to npm dist/index.min.js 
+
+
+**/example/package.json:**
+
+`depedency {
+ "golery-editor": "^1.0.0",
+}`
+
+**yarn upgrade golery-editor**
+
+**/example/src:**
+
+`import from  from "golery-editor/dist/index.min.js";`
+
+
+**/example**
+
+`yarn dev`
+
+Access at localhost:8080
+
+
+
+# USE LOCAL DEV VERSION OF GOLERY-EDITOR
+**/main:**
+
+`: yarn build.dev`
+ 
+Build dist/index.js with source map
+
+
+**/example/package.json:**
+
+`depedency {
+ "golery-editor": "../main",
+}`
+
+Use local version
+
+**/example/src:**
+
+`import from  from "golery-editor/dist/index";`
+
+has source map
+
+**/example**
+
+`yarn dev`
+
 Access at localhost:8080
 
 

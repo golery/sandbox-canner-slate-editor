@@ -21,11 +21,11 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack.config.js --mode development",
-    "dev": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "dev": "webpack-dev-server --config ./webpack.config.js --mode development --progress"
   },
   "dependencies": {
     "antd": "3.9.1",
-    "golery-editor": "^1.0.3",
+    "golery-editor": "../main",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }
