@@ -46,11 +46,17 @@ import TrailingBlock from "slate-trailing-block";
 import SoftBreak from "./slate-soft-break";
 import "prismjs/themes/prism.css";
 
+export { Value as SlateValue } from "slate";
+import SlateHtmlSerializer from "slate-html-serializer";
+import { DEFAULT_RULES } from "@canner/slate-editor-html";
+
 // default value
 import { DEFAULT as DEFAULTLIST } from "@canner/slate-helper-block-list";
 import { DEFAULT as DEFAULTBLOCKQUOTE } from "@canner/slate-helper-block-quote";
 
 import "github-markdown-css";
+
+export {SlateHtmlSerializer, DEFAULT_RULES as SlateEditorHtmlDefaultRule};
 
 const plugins = [
   SoftBreak({ shift: true }),
