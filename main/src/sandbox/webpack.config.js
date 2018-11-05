@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 console.log("######3", __dirname);
 module.exports = {
-    entry: "./src/sandbox/index.js",
+    entry: "./src/sandbox/indexsandbox.js",
     output: {
         path: __dirname + "/",
         publicPath: "/",

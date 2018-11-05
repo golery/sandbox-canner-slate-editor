@@ -36,6 +36,7 @@ class DemoEditor extends React.Component {
         this.state = {
             value: initialValue
         };
+        this.editor = React.createRef();
     }
 
     render() {
@@ -53,7 +54,8 @@ class DemoEditor extends React.Component {
                 </div>
                 <button onClick={() => this._setHtml()}>SetHtml</button>
                 <button onClick={() => this._getHtml()}>GetHtml</button>
-                <GoleryEditor value={value} onChange={(change)=>this._onChange(change)} readOnly={false} debug={true} />
+                <GoleryEditor value={value} onChange={(change, v1, v2)=>this._onChange(change, v1, v2)} readOnly={false} debug={true}
+                            ref={this.editor}/>
             </div>
         );
     }
@@ -69,11 +71,10 @@ class DemoEditor extends React.Component {
         console.log("Out:", serializer.serialize(this.state.value));
     }
 
-    _onChange(change) {
-        let {value} = change;
-        this.setState({value});
-        let html = serializer.serialize(this.state.value)
-        console.log(html);
+    _onChange(change, v1, v2) {
+        let value = change.value;
+        let innerHtml = serializer.serialize(value);
+        this.setState({value: value});
     }
 }
 
