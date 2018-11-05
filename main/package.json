@@ -11,7 +11,8 @@
   "scripts": {
     "build.dev": "webpack --config webpack.config.js --mode development --progress",
     "build.prod": "webpack --config webpack.config.js --mode production  --progress --output-filename index.min.js",
-    "build": "yarn run build.dev && yarn run build.prod"
+    "build": "yarn run build.dev && yarn run build.prod",
+    "dev": "webpack-dev-server --config ./src/sandbox/webpack.config.js --mode development --progress"
   },
   "files": [
     "dist"
@@ -39,6 +40,8 @@
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "less-loader": "^4.1.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-emotion": "^9.2.12",
     "slate": "^0.33.0",
     "slate-edit-blockquote": "0.6.1",
@@ -57,7 +60,8 @@
     "slate-trailing-block": "^0.5.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "license": "MIT"
 }
