@@ -210,43 +210,13 @@ export default class GoleryEditorComponent extends React.Component<Props, State>
     } = this.props;
     const { isFull } = this.state;
 
-    return readOnly ? (
-      <CannerEditor value={value} onChange={arg => arg} readOnly={readOnly} />
-    ) : (
-      <Container isFull={isFull} {...rest}>
-        <div style={{ position: "relative" }}>
-          {isFull ? (
-            <FixedToolbar>
-              <Toolbar
-                isFull={true}
-                value={value}
-                serviceConfig={serviceConfig}
-                galleryConfig={galleryConfig}
-                menuToolbarOption={menuToolbarOption}
-                onChange={onChange}
-                goFull={this.goFull}
-              />
-            </FixedToolbar>
-          ) : (
-            <Toolbar
-              serviceConfig={serviceConfig}
-              galleryConfig={galleryConfig}
-              menuToolbarOption={menuToolbarOption}
-              value={value}
-              onChange={onChange}
-              goFull={this.goFull}
-            />
-          )}
-          <EditorContainer isFull={isFull}>
+    return <EditorContainer isFull={isFull}>
                 <CannerEditor
                     value={value}
                     onChange={onChange}
                     readOnly={readOnly}
                 />
-          </EditorContainer>
-        </div>
-      </Container>
-    );
+          </EditorContainer>;
   }
 }
 
