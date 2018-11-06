@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import styles from "./indexsandbox.css";
 import EditorToolbar from "../EditorToolbar";
-import GoleryEditor, {SlateHtmlSerializer, SlateEditorHtmlDefaultRule, SlateValue} from "../index";
+import {GoleryEditor,  SlateValue, htmlSerializer} from "../index";
 
 import "antd/dist/antd.css";
 
@@ -30,7 +30,6 @@ const initialValue = SlateValue.fromJSON({
     }
 });
 
-const serializer = new SlateHtmlSerializer({ rules: SlateEditorHtmlDefaultRule });
 
 class DemoEditor extends React.Component {
     constructor() {
@@ -68,18 +67,18 @@ class DemoEditor extends React.Component {
 
     _setHtml() {
         let html = document.getElementById("sample").innerHTML;
-        const v = serializer.deserialize(html);
+        const v = htmlSerializer.deserialize(html);
         this.setState({ value: v });
         console.log(v);
     }
 
     _getHtml() {
-        console.log("Out:", serializer.serialize(this.state.value));
+        console.log("Out:", htmlSerializer.serialize(this.state.value));
     }
 
     _onChange(change, v1, v2) {
         let value = change.value;
-        let innerHtml = serializer.serialize(value);
+        let innerHtml = htmlSerializer.serialize(value);
         this.setState({value: value});
     }
 }

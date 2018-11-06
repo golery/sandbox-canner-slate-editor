@@ -18,7 +18,7 @@ function getEditor() {
 
 let Editor = getEditor();
 
-export default class GoleryEditor extends React.Component {
+class GoleryEditor extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -34,5 +34,8 @@ export default class GoleryEditor extends React.Component {
 export {Value as SlateValue} from "slate";
 import SlateHtmlSerializer from "slate-html-serializer";
 import {DEFAULT_RULES} from "@canner/slate-editor-html";
+import EditorToolbar from "./EditorToolbar";
 
-export {SlateHtmlSerializer, DEFAULT_RULES as SlateEditorHtmlDefaultRule};
+const htmlSerializer = new SlateHtmlSerializer({ rules: DEFAULT_RULES });
+
+export {GoleryEditor, EditorToolbar,  htmlSerializer};
