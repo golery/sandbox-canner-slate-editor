@@ -49,7 +49,7 @@ import "prismjs/themes/prism.css";
 import { DEFAULT as DEFAULTLIST } from "@canner/slate-helper-block-list";
 import { DEFAULT as DEFAULTBLOCKQUOTE } from "@canner/slate-helper-block-quote";
 
-import "github-markdown-css";
+// import "github-markdown-css";
 
 export default class EditorToolbar extends React.Component {
     render() {

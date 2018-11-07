@@ -50,7 +50,7 @@ import "prismjs/themes/prism.css";
 import { DEFAULT as DEFAULTLIST } from "@canner/slate-helper-block-list";
 import { DEFAULT as DEFAULTBLOCKQUOTE } from "@canner/slate-helper-block-quote";
 
-import "github-markdown-css";
+//import "github-markdown-css";
 
 const plugins = [
   SoftBreak({ shift: true }),
@@ -129,18 +129,6 @@ const Container = styled.div`
   overflow-x: hidden;
 `;
 
-const EditorContainer = styled.div`
-  padding: 25px;
-  margin-top: ${props => (props.isFull ? "60px" : "10px")};
-`;
-
-const FixedToolbar = styled.div`
-  position: fixed;
-  top: 10px;
-  z-index: 10;
-  width: 100%;
-`;
-
 const toolbarOptions = {
   icons: [Bold, Italic, StrikeThrough, Underline, Code, Clean],
   position: "top",
@@ -210,13 +198,11 @@ export default class GoleryEditorComponent extends React.Component<Props, State>
     } = this.props;
     const { isFull } = this.state;
 
-    return <EditorContainer isFull={isFull}>
-                <CannerEditor
+    return <CannerEditor
                     value={value}
                     onChange={onChange}
                     readOnly={readOnly}
-                />
-          </EditorContainer>;
+                />;
   }
 }
 
@@ -232,7 +218,6 @@ class CannerEditor extends React.Component<EditorProps> {
     const { value, onChange, readOnly } = this.props;
     return (
       <Editor
-        className="markdown-body"
         value={value}
         readOnly={readOnly}
         onChange={onChange}

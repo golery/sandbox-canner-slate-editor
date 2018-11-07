@@ -5,9 +5,8 @@ import styles from "./indexsandbox.css";
 import EditorToolbar from "../EditorToolbar";
 import {GoleryEditor,  SlateValue, htmlSerializer} from "../index";
 
-import "antd/dist/antd.css";
+//import "antd/dist/antd.css";
 
-console.log("$$$$$$$$$$$4");
 
 const initialValue = SlateValue.fromJSON({
     document: {
