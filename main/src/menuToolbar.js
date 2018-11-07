@@ -43,7 +43,6 @@ const IconContainer = styled.div`
   color: #222;
   cursor: pointer;
   -webkit-transition: background 0.2s ease 0s;
-  border-bottom: 0.5px solid #ebebeb;
 
   ${props =>
     !props.noHover &&
@@ -113,7 +112,7 @@ export default class Toolbar extends React.Component<Props, State> {
       { type: FontBgColor, title: "Font Background Color" },
       "seperator",
       { type: "fullScreen", title: "Full Screen" },
-      { type: "help", title: "Help" }
+      // { type: "help", title: "Help" }
     ];
 
     return (
