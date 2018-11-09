@@ -6,6 +6,8 @@ const config = {
         publicPath: "/",
         library: 'GoleryEditor',
         libraryTarget: 'umd',
+        // https://github.com/webpack/webpack/issues/6784
+        globalObject: 'typeof self !== \'undefined\' ? self : this'
     },
     devtool: "source-map",
     externals: {
