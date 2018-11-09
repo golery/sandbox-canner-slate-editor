@@ -5,14 +5,16 @@
 # To publish:   
 /main:
 
-yarn build
+1. Build both dev and prod vesrion
 
-build both dev and prod vesrion
+`yarn build`
 
-yarn publish
+2. Publish
 
-To use
-yarn upgrade --latest golery-editor
+`yarn publish`
+
+3. In golery project
+`yarn upgrade --latest golery-editor`
 
 # Dev
-Read /example for dev
+Read /example/README.md
