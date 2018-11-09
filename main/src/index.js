@@ -21,7 +21,7 @@ if (isBrowser) {
     GoleryEditor = Mock;
     EditorToolbar = Mock;
     htmlSerializer = {serialize: () => null, deserialize: () => null};
-    SlateValue = {fromJson: () => null}
+    SlateValue = {fromJSON: () => null}
 }
 
 const GoleryEditorLib = {GoleryEditor, EditorToolbar, htmlSerializer, SlateValue};
