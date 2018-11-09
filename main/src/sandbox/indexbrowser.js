@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import styles from "./indexsandbox.css";
-import EditorToolbar from "../EditorToolbar";
-import {GoleryEditor,  SlateValue, htmlSerializer} from "../index";
+import styles from "./indexbrowser.css";
+import GoleryEditorLib from "../index";
+let {GoleryEditor, EditorToolbar, SlateValue, htmlSerializer} = GoleryEditorLib;
 
 //import "antd/dist/antd.css";
 

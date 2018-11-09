@@ -12,15 +12,19 @@
     "build.dev": "webpack --config webpack.config.js --mode development --progress",
     "build.prod": "webpack --config webpack.config.js --mode production  --progress --output-filename index.min.js",
     "build": "yarn run build.dev && yarn run build.prod",
-    "dev": "webpack-dev-server --config ./src/sandbox/webpack.config.js --mode development --progress"
+
+    "dev.browser": "webpack-dev-server --config ./src/sandbox/webpack.config.browser.js --mode development --progress",
+    "watch.node": "webpack --config ./src/sandbox/webpack.config.node.js --mode development --progress --watch",
+    "dev.node": "node ./src/sandbox/build/server.js"
   },
   "files": [
     "dist"
   ],
   "main": "dist/index.min.js",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/plugin-transform-flow-strip-types": "^7.0.0",
