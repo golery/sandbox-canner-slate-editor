@@ -1,3 +1,4 @@
+const path = require('path');
 const config = {
     entry: "./src/index.js",
     output: {
@@ -54,7 +55,11 @@ const config = {
         ]
     },
     resolve: {
-        extensions: ["*", ".js", ".jsx"]
+        extensions: ["*", ".js", ".jsx"],
+        alias: {
+            // have shorter list of language for prism
+            "prismjs/components.json":  path.resolve(__dirname, 'src/components/codeblock/prism/components.json')
+        }
     }
 };
 
