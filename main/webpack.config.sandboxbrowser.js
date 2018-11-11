@@ -1,5 +1,6 @@
+const path = require('path');
 const webpack = require("webpack");
-console.log("######3", __dirname);
+console.log("######3", path.resolve('src/components/codeblock/languages.json'));
 module.exports = {
     entry: "./src/sandbox/indexbrowser.js",
     output: {
@@ -45,11 +46,14 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ["*", ".js", ".jsx"]
+        extensions: ["*", ".js", ".jsx"],
+        alias: {
+            "prismjs/components.json": '/work/golery-editor/main/src/components/codeblock/prism/components.json'
+        }
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
-        contentBase: __dirname,
+        contentBase: path.resolve(__dirname, 'src', 'sandbox'),
         hot: true
     }
 };

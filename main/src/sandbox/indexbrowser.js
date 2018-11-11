@@ -19,7 +19,7 @@ const initialValue = SlateValue.fromJSON({
                         object: "text",
                         leaves: [
                             {
-                                text: "A line of text in a paragraph."
+                                text: "This is code: for (var i = 0; i < 10; i++) {}"
                             }
                         ]
                     }
