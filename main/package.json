@@ -30,6 +30,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
     "@canner/slate-constant": "^1.5.0",
     "@canner/slate-icon-align": "^1.5.0",
     "@canner/slate-icon-clean": "^1.5.0",
