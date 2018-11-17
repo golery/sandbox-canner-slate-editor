@@ -65,10 +65,12 @@ const config = {
 
 module.exports = function (env, argv) {
     if (argv.mode === "production") {
-        config.output.filename = "index.min.js";
+        config.output.filename = "index.js";
+        config.output.path += "/min";
         config.devtool = false;
     } else {
-        config.output.filename = "index.dev.js";
+        config.output.filename = "index.js";
+        config.output.path += "/dev";
         config.devtool = "source-map";
     }
     console.log(config);
