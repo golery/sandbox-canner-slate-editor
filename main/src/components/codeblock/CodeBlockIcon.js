@@ -20,7 +20,7 @@ import {CODE, CODE_LINE, PARAGRAPH} from "@canner/slate-constant/lib/blocks";
 import {
     codeBlockNode,
     codeLineNode
-} from "@canner/slate-editor-renderer/lib/codeBlockNode";
+} from "./codeBlockNode";
 import {languages} from "prismjs/components.json";
 
 import 'antd/lib/select/style/index.css';

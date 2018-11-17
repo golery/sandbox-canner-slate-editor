@@ -35,30 +35,32 @@ export const codeBlockNode = options => {
       );
     };
 
-    return (
-      <CodeblockContainer>
-        <CodeblockLang contentEditable={false}>
-          <Select
+    const codeBlockLang = editor.props.readOnly ? null : <CodeblockLang contentEditable={false}>
+        <Select
             showSearch
             placeholder="Language"
             onSelect={selectLang}
             style={{ minWidth: "80px" }}
             defaultValue={syntax || "TXT"}
             size="small"
-          >
+        >
             {Object.keys(languages)
-              .filter(lang => {
-                return languages[lang].title;
-              })
-              .map(lang => {
-                return (
-                  <Option value={lang} key={lang}>
-                    {languages[lang].title}
-                  </Option>
-                );
-              })}
-          </Select>
-        </CodeblockLang>
+                .filter(lang => {
+                    return languages[lang].title;
+                })
+                .map(lang => {
+                    return (
+                        <Option value={lang} key={lang}>
+                            {languages[lang].title}
+                        </Option>
+                    );
+                })}
+        </Select>
+    </CodeblockLang>;
+
+    return (
+      <CodeblockContainer>
+        {codeBlockLang}
         <pre>
           <code {...attributes}>{children}</code>
         </pre>

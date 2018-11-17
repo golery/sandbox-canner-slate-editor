@@ -14,7 +14,7 @@ import Blockquote, { BlockquotePlugin } from "@canner/slate-icon-blockquote";
 import Bold, { BoldPlugin } from "@canner/slate-icon-bold";
 import Code, { CodePlugin } from "@canner/slate-icon-code";
 import Clean from "@canner/slate-icon-clean";
-import { CodeBlockPlugin } from "@canner/slate-icon-codeblock";
+import { CodeBlockPlugin } from "./components/codeblock/CodeBlockIcon";
 import { TablePlugin } from "@canner/slate-icon-table";
 import { FontBgColorPlugin } from "@canner/slate-icon-fontbgcolor";
 import { FontColorPlugin } from "@canner/slate-icon-fontcolor";
