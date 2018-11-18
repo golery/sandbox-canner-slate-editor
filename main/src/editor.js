@@ -207,7 +207,7 @@ export default class GoleryEditorComponent extends React.Component<Props, State>
 }
 
 @toolbar(toolbarOptions)
-@sidebar(sidebarOptions)
+//@sidebar(sidebarOptions)
 class CannerEditor extends React.Component<EditorProps> {
   shouldComponentUpdate(nextProps: EditorProps) {
     if (this.props.value === nextProps.value) return false;
