@@ -12,9 +12,7 @@ const Mock = () => <div>(mock react component in nodejs)</div>;
 
 if (isBrowser) {
     GoleryEditor = require('./editor').default;
-    const SlateHtmlSerializer = require('slate-html-serializer').default;
-    const DEFAULT_RULES = require("@canner/slate-editor-html").DEFAULT_RULES;
-    htmlSerializer = new SlateHtmlSerializer({rules: DEFAULT_RULES});
+    htmlSerializer = require('./components/html/html').default;
     EditorToolbar = require("./EditorToolbar").default;
     SlateValue = require("slate").Value;
 } else {
@@ -23,6 +21,7 @@ if (isBrowser) {
     htmlSerializer = {serialize: () => null, deserialize: () => null};
     SlateValue = {fromJSON: () => null}
 }
+
 
 const GoleryEditorLib = {GoleryEditor, EditorToolbar, htmlSerializer, SlateValue};
 export default GoleryEditorLib;

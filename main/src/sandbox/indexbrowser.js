@@ -49,6 +49,9 @@ class DemoEditor extends React.Component {
                 <GoleryEditor value={value} onChange={onChange} readOnly={false} debug={true}
                             ref={this.editor}/>
                 </div>
+                <button onClick={() => this._setHtml()}>SetHtml</button>
+                <button onClick={() => this._getHtml()}>GetHtml</button>
+                <button onClick={() => this._setHtmlFromGet()}>SetHtmlFromGet</button>
 
                 <div id={"sample"}>
                     This is test<ol>
@@ -58,8 +61,6 @@ class DemoEditor extends React.Component {
                     <li>second</li>
                 </ol>
                 </div>
-                <button onClick={() => this._setHtml()}>SetHtml</button>
-                <button onClick={() => this._getHtml()}>GetHtml</button>
             </div>
         );
     }
@@ -72,12 +73,20 @@ class DemoEditor extends React.Component {
     }
 
     _getHtml() {
-        console.log("Out:", htmlSerializer.serialize(this.state.value));
+        let html = htmlSerializer.serialize(this.state.value);
+        this.html = html;
+        console.log("Out:", html);
+    }
+
+    _setHtmlFromGet() {
+        let value = htmlSerializer.deserialize(this.html);
+        console.log(value.toJSON());
+        this.setState({ value: value });
     }
 
     _onChange(change, v1, v2) {
         let value = change.value;
-        let innerHtml = htmlSerializer.serialize(value);
+        // let innerHtml = htmlSerializer.serialize(value);
         this.setState({value: value});
     }
 }
