@@ -9,12 +9,7 @@
     "url": "https://www.golery.com"
   },
   "scripts": {
-    "build.dev": "webpack --config webpack.config.js --mode development --progress",
-    "build.prod": "webpack --config webpack.config.js --mode production  --progress --output-filename index.min.js",
-    "build": "yarn run build.dev && yarn run build.prod",
-    "dev.browser": "webpack-dev-server --config webpack.config.sandboxbrowser.js --mode development --progress",
-    "watch.node": "webpack --config webpack.config.sandboxnode.js --mode development --progress --watch",
-    "dev.node": "node ./src/sandbox/build/server.js"
+    "dev": "webpack-dev-server --config webpack.config.sandboxbrowser.js --mode development --progress"
   },
   "files": [
     "dist"
